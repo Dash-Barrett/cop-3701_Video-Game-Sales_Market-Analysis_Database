@@ -1,7 +1,7 @@
 import pandas as pd
 import random as r
 
-loadin = pd.read_csv("Initial/vgsales.csv")
+loadin = pd.read_csv("Initial\vgsales.csv")
 mainBody = loadin.dropna()
 
 #Getting All of the values that need to be generated manually
@@ -78,7 +78,7 @@ platformTable['Launch_Year'] = [2006, 1985, 1989, 2004, 2005,
                                 1999, 1990, 1987, 1993, 1990, 1994]
 
 platformTable = platformTable.drop_duplicates()
-morePlats = pd.read_csv("Initial/more_consoles.csv")
+morePlats = pd.read_csv("Initial\more_consoles.csv")
 platformTable = pd.concat([platformTable, morePlats])
 platformTable.to_csv(f"data\PlatformTable.csv", index = False)
 print("Created PlatformTable.csv")
