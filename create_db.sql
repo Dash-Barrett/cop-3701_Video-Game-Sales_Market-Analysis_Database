@@ -1,6 +1,6 @@
 -- Use this block from SYSTEM user
--- CREATE USER cop3710 IDENTIFIED BY "sp2026";
--- GRANT ALL PRIVILEGES TO cop3710;
+-- CREATE USER _ IDENTIFIED BY "";
+-- GRANT ALL PRIVILEGES TO _;
 
 -- Creating the Game Table, Stores Basic Information on the Game,
 create table GAME(
