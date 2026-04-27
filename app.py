@@ -10,10 +10,10 @@ import oracledb
 
 # --- DATABASE SETUP ---
 # Update this path to your local Instant Client folder
-LIB_DIR = r"C:\oracle\instantclient_23_0"  
-DB_USER = "system" 
-DB_PASS = "21466K" 
-DB_DSN  = "localhost:1521/XE"
+LIB_DIR = # INSTANT CLIENT PATH
+DB_USER = # USERNAME
+DB_PASS = # PASSWORD
+DB_DSN  = # DSN 
 
 
 # Initialize Oracle Client for Thick Mode
