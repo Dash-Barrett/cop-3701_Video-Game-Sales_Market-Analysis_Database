@@ -37,7 +37,7 @@ def get_connection():
 st.title("Video Game Sales Market Analysis Database")
 st.subheader("Search for & Analysis Info")
 
-menu = ["Region Sales", "Publisher Sales", "Platform Sales", "Average Current Price on Platform", "Price History of a Game"]
+menu = ["Region Sales", "Publisher Sales", "Platform Sales", "Average Current Price on Platform", "Price History of a Game", "Big List of Games"]
 choice = st.sidebar.selectbox("Select Action", menu)
 
 
@@ -153,6 +153,24 @@ elif choice == "Price History of a Game":
             else:
                 st.info("Game not found.")
         except Exception as e:
+            st.error(f"Error: {e}")
+elif choice == "Big List":
+    st.write("### Majority of Games on here")
+    try:
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute("SELECT distinct g.Game_Name, g.Publisher_Name, p.Platform_Name FROM GAME g LEFT JOIN GAME_SALES_REGION p on g.Game_ID = p.Game_ID")
+        conn.commit()
+        data = cur.fetchall()
+        cur.close()
+        conn.close()
+
+        if data:
+            st.table(data)
+            st.success(f"List made!")
+        else:
+            st.info("No list was made.")
+    except Exception as e:
             st.error(f"Error: {e}")
 
 # run using: streamlit run app.py
