@@ -8,3 +8,5 @@ The end users of this database would likely be game data analysts and marketing 
 Oracle Database will be the relational database management system (RDBMS) used in this project, while DataGrip and Visual Studio Code will be the softwares that all of the scripts are made on.
 
 Data Source: https://www.kaggle.com/datasets/gregorut/videogamesales
+
+Front Page of Database: ![The page that app.py creates is shown here](./images/quick_image_demo.png) 
